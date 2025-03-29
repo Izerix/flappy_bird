@@ -20,7 +20,7 @@ Installation
 
 Clone the repository:
 
-git clone https://github.com/your-repo/flappy-bird-godot.git
+git clone https://github.com/Izerix/flappy_bird
 
 Open the project in Godot.
 
