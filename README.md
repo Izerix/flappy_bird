@@ -59,7 +59,3 @@ Credits
 Developed using Godot Engine
 
 Inspired by the original Flappy Bird game
-
-Contributing
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
