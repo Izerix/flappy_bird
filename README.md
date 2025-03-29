@@ -1,4 +1,4 @@
-Flappy Bird Clone in Godot
+Flappy Bird in Godot
 
 This project is a simple Flappy Bird clone developed using the Godot game engine. The goal of this project is to demonstrate basic 2D game development concepts, including physics, collision detection, and scene management in Godot.
 
