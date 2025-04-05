@@ -1,4 +1,4 @@
-Flappy Bird Clone in Godot
+Flappy Bird in Godot
 
 This project is a simple Flappy Bird clone developed using the Godot game engine. The goal of this project is to demonstrate basic 2D game development concepts, including physics, collision detection, and scene management in Godot.
 
@@ -20,7 +20,7 @@ Installation
 
 Clone the repository:
 
-git clone https://github.com/your-repo/flappy-bird-godot.git
+git clone https://github.com/Izerix/flappy_bird
 
 Open the project in Godot.
 
@@ -59,7 +59,3 @@ Credits
 Developed using Godot Engine
 
 Inspired by the original Flappy Bird game
-
-Contributing
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
