@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=3 uid="uid://cr3pl7yfk32tb"]
+
+[ext_resource type="Script" path="res://scripts/pipe.gd" id="1_i8p56"]
+[ext_resource type="Texture2D" uid="uid://bdltoimkql1nx" path="res://assets/pipe.png" id="2_jcmtj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rnnky"]
+size = Vector2(166, 42)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6a0s2"]
+size = Vector2(161, 524)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h5r4x"]
+size = Vector2(163, 39)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0wuvw"]
+size = Vector2(152, 524)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_51tso"]
+size = Vector2(20, 198)
+
+[node name="Pipe" type="Area2D" groups=["pipes"]]
+script = ExtResource("1_i8p56")
+
+[node name="Lower" type="Sprite2D" parent="."]
+position = Vector2(0, 376)
+scale = Vector2(1.00966, 1.00966)
+texture = ExtResource("2_jcmtj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 115)
+shape = SubResource("RectangleShape2D_rnnky")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 398)
+shape = SubResource("RectangleShape2D_6a0s2")
+
+[node name="Upper" type="Sprite2D" parent="."]
+position = Vector2(-0.75, -380.04)
+scale = Vector2(0.992754, 0.992754)
+texture = ExtResource("2_jcmtj")
+flip_v = true
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(-2.5, -119.5)
+shape = SubResource("RectangleShape2D_h5r4x")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(-4, -398)
+shape = SubResource("RectangleShape2D_0wuvw")
+
+[node name="ScoreArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScoreArea"]
+position = Vector2(72, -1)
+shape = SubResource("RectangleShape2D_51tso")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="ScoreArea" to="." method="_on_score_area_body_entered"]

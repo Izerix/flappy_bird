@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dguktbvk4j10j"]
+
+[ext_resource type="AudioStream" uid="uid://cvnti8rdhacpd" path="res://sfx/gragy-bird.mp3" id="1_ssmau"]
+
+[node name="BackgroundMusic" type="AudioStreamPlayer"]
+stream = ExtResource("1_ssmau")
+bus = &"Music"
