@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://6jh55hbah438"]
+
+[ext_resource type="AudioStream" uid="uid://dbmrnbl8lo0cf" path="res://sfx/Gragas_Original_Death_3.ogg" id="1_pqaj0"]
+
+[node name="BirdDeath" type="AudioStreamPlayer"]
+stream = ExtResource("1_pqaj0")
+bus = &"SFX"

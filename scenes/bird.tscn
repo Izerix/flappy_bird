@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://b6xt1pam4caki"]
+
+[ext_resource type="Script" path="res://scripts/bird.gd" id="1_jmxwj"]
+[ext_resource type="Texture2D" uid="uid://lly8w2jewuk5" path="res://assets/bird.png" id="2_oqm0p"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nlcho"]
+atlas = ExtResource("2_oqm0p")
+region = Rect2(0, 0, 246, 319)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xn4pq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nlcho")
+}],
+"loop": true,
+"name": &"flying",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0hppq"]
+radius = 18.0
+height = 52.0
+
+[node name="Bird" type="CharacterBody2D"]
+script = ExtResource("1_jmxwj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2, 0)
+rotation = 1.5708
+scale = Vector2(0.138211, 0.138211)
+sprite_frames = SubResource("SpriteFrames_xn4pq")
+animation = &"flying"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_0hppq")
